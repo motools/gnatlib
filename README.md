@@ -1,4 +1,10 @@
-This is a python library version of the GNAT software
+GNATlib
+=======
+
+About
+-----
+
+This is a python library version of the [GNAT software](https://github.com/motools/gnat)
 
 Perform a track lookup on the Musicbrainz database, using
 embedded ID3 tags or manually supplied metadata and the
@@ -23,16 +29,19 @@ disambiguation algorithm from Raimond et al. 2008
   yves.raimond (at) elec.qmul.ac.uk
   kurt.jacobson (at) elec.qmul.ac.uk
 
-REQUIREMENTS:
+Requirements
+------------
 
- - musicbrainz2 - http://musicbrainz.org/doc/PythonMusicBrainz2
- - mutagen - easy_install mutagen
+ * musicbrainz2 - http://musicbrainz.org/doc/PythonMusicBrainz2
+ * mutagen - easy_install mutagen
 
-INSTALLATION:
+Installation
+------------
 
 $ python setup.py install
 
-USAGE:
+Usage
+-----
 
 >> import gnatlib
 >> result = gnatlib.filelookup('test.mp3')
@@ -57,11 +66,17 @@ u'http://musicbrainz.org/artist/cbcbb22c-3a8d-46af-b4ba-09c98f0d7931'
 Notice this actually returns the more accurate result for 'J-Dilla' the pseudonym
 used by Jay Dee when the album 'Donuts' was released.
 
-KNOWN ISSUES:
+Known Issues
+------------
 
-	2009-20-04
-	- @param use_cache=False does not seem to work correctly - sorry you've got to use the cache for now...
-	- turning off verbose seems to not work :-/
-	- no clean up of the ./cache directory - you have to do this yourself
-	- we use dbtune.org/musicbrainz URIs - it is not clear this is best
-	- no support for PUID MusicDNS lookup
+* 2009-20-04
+	* @param use_cache=False does not seem to work correctly - sorry you've got to use the cache for now...
+	* turning off verbose seems to not work :-/
+	* no clean up of the ./cache directory - you have to do this yourself
+	* we use dbtune.org/musicbrainz URIs - it is not clear this is best
+	* no support for PUID MusicDNS lookup
+
+PS
+--
+
+The [old project repository location at SourceForge](http://motools.svn.sourceforge.net/viewvc/motools/gnatlib/) is now deprecated. All new developments will be pushed to this repository location here at GitHub.
